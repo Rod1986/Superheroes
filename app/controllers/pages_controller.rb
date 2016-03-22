@@ -1,9 +1,10 @@
 class PagesController < ApplicationController
   def batman
+    render layout:'batmanlanding'
   end
 
   def superman
-    render layout:'landing'
+    render layout:'supermanlanding'
   end
 
   def batman_vs_superman
