@@ -5,4 +5,7 @@ class PagesController < ApplicationController
   def superman
     render layout:'landing'
   end
+
+  def batman_vs_superman
+  end
 end
