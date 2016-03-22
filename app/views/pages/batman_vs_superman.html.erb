@@ -1,3 +1,29 @@
 <h1>Batman vs Superman</h1>
 <a href="<%= pages_batman_path %>"><%= image_tag('batman', width:'50%') %></a>
 <a href="<%= pages_superman_path %>"><%= image_tag('superman', width:'50%') %></a>
+
+<h2>Choose your Hero</h2>
+
+<%= form_tag pages_save_vote_path, method:'post' do %> 
+
+<div>
+	<%= label_tag :heroe, 'Hero' %>
+	<%= text_field_tag :heroe, nil, class:'form-control' %>
+</div>
+
+<div>
+	<%= label_tag :email, 'Email' %>
+	<%= text_field_tag :email, nil, class:'form-control' %>
+</div>
+
+<div>
+	<%= submit_tag 'send', class:'btn btn-success' %>
+</div>
+
+	<% end %>
+
+	<% if notice %>
+		<%= notice %>
+	<% elsif alert %>
+		<%= alert %>
+	<% end %>
