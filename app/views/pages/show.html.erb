@@ -1,0 +1,11 @@
+<h1>Votes</h1>
+<%= link_to 'Index', root_path, class:"btn btn-success" %>
+
+<ul>
+	<%= @votes.each do |vote| %>
+		<li>
+			<p>heroe: <%= vote.heroe %></p>
+			<p>email: <%= vote.email %></p>
+		</li>
+	<% end %>
+</ul>

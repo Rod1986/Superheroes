@@ -10,6 +10,10 @@ class PagesController < ApplicationController
   def batman_vs_superman
   end
 
+  def show
+    @votes = Vote.all
+  end
+
   def save_vote
     if params[:heroe].present? && params[:email].present?
       Vote.new(
